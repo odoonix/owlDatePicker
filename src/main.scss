@@ -1,0 +1,20 @@
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
+// Import Custom SB Admin 2 Mixins and Components
+@import "./scss/mixins.scss";
+@import "./scss/global.scss";
+@import "./scss/utilities.scss";
+
+// Custom Components
+@import "./scss/dropdowns.scss";
+@import "./scss/cards.scss";
+@import "./scss/charts.scss";
+@import "./scss/login.scss";
+@import "./scss/error.scss";
+@import "./scss/footer.scss";
