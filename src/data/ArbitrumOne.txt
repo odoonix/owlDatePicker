@@ -1,3 +1,0 @@
-find a way to get proxy contract ABI
-// https://arbiscan.io/address/0xfb1f3ffa0d9819da45d4e91967d46faf025aa1c3#writeProxyContract
-//try using compiler to get ABI

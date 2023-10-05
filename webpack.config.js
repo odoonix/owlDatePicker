@@ -8,7 +8,7 @@ module.exports = function (env, argv) {
 	const mode = argv.mode || "development";
 	return {
 		mode: mode,
-		entry: "./src/main.ts",
+		entry: "./src/main.js",
 		devtool: 'inline-source-map',
 		output: {
 			filename: "bundle.js",
