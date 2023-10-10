@@ -1,0 +1,19 @@
+h1 {
+	background-color:red;
+	font-size: 20px;
+}
+header {
+	background-color: blueviolet;
+}
+.slider{
+	background-color: brown;
+	font-size: 15px;
+}
+footer{
+	background-color: chartreuse;
+	font-size: 10px;
+}
+p{
+	color: darkslategray;
+	font-size: 15px;
+}
