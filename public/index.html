@@ -11,6 +11,9 @@
 	<meta name="author" content="">
 
 	<title>Dashboard | GenZ Staking</title>
+	<button t-on-click="() => state.value = state.value - props.decrement">
+		Decrease Value [<t t-esc="state.value"/>]
+	</button>
 	
 </head>
 
