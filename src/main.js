@@ -4,7 +4,7 @@ import { Component, xml, useState, mount } from "@odoo/owl";
 
 class Counter extends Component {
   static template = xml`
-    <button t-on-click="() => state.value = state.value + props.increment"  data-custom="example">
+    <button t-on-click="() => state.value = state.value + props.increment" >
       Click Me! [<t t-esc="state.value"/>]
     </button>`;
 
