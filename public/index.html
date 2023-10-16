@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
+    <title>Dashboard | GenZ Staking</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<title>Dashboard | GenZ Staking</title>
-	
-	
-</head>
-
-<body id="page-top" style="background-color: lightblue;"></body> 
+  <body id="page-top" style="background-color: lightblue">
+    <div class="calendar-box">
+      <h2 class="calendar-title">Select a Date</h2>
+      <input type="text" id="dateInput" placeholder="Select a date" />
+      <div class="calendar" id="calendar">
+        <div class="header">
+          <button id="prevBtn">&lt;</button>
+          <h2 id="monthYear">Month Year</h2>
+          <button id="nextBtn">&gt;</button>
+        </div>
+        <div class="days" id="daysContainer"></div>
+      </div>
+    </div>
+  </body>
 </html>
