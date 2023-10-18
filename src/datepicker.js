@@ -20,15 +20,16 @@ const calendar = document.getElementById("calendar");
 //   "December",
 // ];
 
-const currentDate = new Date();
-let selectedDate = null;
+// const currentDate = new Date();
+// let selectedDate = null;
 
-function dayclick(day) {
-  selectedDate = new Date(
-    currentDate.getFullYear(),
-    currentDate.getMonth(),
-    day
-  );
+// function dayclick(day) {
+//   selectedDate = new Date(
+//     currentDate.getFullYear(),
+//     currentDate.getMonth(),
+//     day
+//   );
 
-  dateInput.value = selectedDate.toLocaleDateString("fa-IR");
-}
+//   dateInput.value = selectedDate.toLocaleDateString("fa-IR");
+// }
+
