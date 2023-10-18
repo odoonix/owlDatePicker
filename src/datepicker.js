@@ -5,31 +5,74 @@ const monthYear = document.getElementById("monthYear");
 const dateInput = document.getElementById("dateInput");
 const calendar = document.getElementById("calendar");
 
-// const month = [
-//   "January",
-//   "February",
-//   "March",
-//   "April",
-//   "May",
-//   "June",
-//   "July",
-//   "August",
-//   "September",
-//   "October",
-//   "November",
-//   "December",
-// ];
+let currentDate = new Date();
+let selectedDate = null;
 
-// const currentDate = new Date();
-// let selectedDate = null;
+function dayClick(day) {
+  selectedDate = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    day
+  );
+  dateInput.value = selectedDate.toLocaleDateString("ar-SA");
+  calendar.style.display = "none";
+  renderCalendar();
+}
 
-// function dayclick(day) {
-//   selectedDate = new Date(
-//     currentDate.getFullYear(),
-//     currentDate.getMonth(),
-//     day
-//   );
+function createDayElement(day) {
+  const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+  const dayElement = document.createElement("div");
+  dayElement.classList.add("day");
 
-//   dateInput.value = selectedDate.toLocaleDateString("fa-IR");
-// }
+  if (date.toDateString() === new Date().toDateString()) {
+    dayElement.classList.add("current");
+  }
+  if (selectedDate && date.toDateString() === selectedDate.toDateString()) {
+    dayElement.classList.add("selected");
+  }
 
+  dayElement.textContent = day;
+  dayElement.addEventListener("click", () => {
+    dayClick(day);
+  });
+  daysContainer.appendChild(dayElement);
+}
+
+function renderCalendar() {
+  daysContainer.innerHTML = "";
+  const firstDay = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    1
+  );
+  const lastDay = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth() + 1,
+    0
+  );
+
+  monthYear.textContent = `${currentDate.toLocaleString("default", {
+    month: "long",
+  })} 
+  ${currentDate.getFullYear()}`;
+
+  for (let day = 1; day <= lastDay.getDate(); day++) {
+    createDayElement(day);
+  }
+}
+
+prevBtn.addEventListener("click", () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  renderCalendar();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar();
+});
+
+dateInput.addEventListener("click", () => {
+  calendar.style.display = "block";
+});
+
+renderCalendar();

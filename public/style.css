@@ -71,19 +71,20 @@ body {
 }
 
 .day {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
+    color: #004cff;
   }
   
-  .day.current {
-    background-color: #ff6600;
+.current {
+    background-color: #0fb500;
     color: white;
   }
   
-  .day.selected {
-    background-color: #004cff;
+.selected {
+    background-color: #ff0000;
     color: white;
   }
   
@@ -96,4 +97,4 @@ body {
     outline: none;
     cursor: pointer;
   }
-   */
+ 
