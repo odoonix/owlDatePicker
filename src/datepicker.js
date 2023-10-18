@@ -15,7 +15,7 @@ function dayClick(day) {
     day
   );
   dateInput.value = selectedDate.toLocaleDateString("ar-SA");
-  calendar.style.display = "none";
+  // calendar.style.display = "none";
   renderCalendar();
 }
 
@@ -51,10 +51,8 @@ function renderCalendar() {
     0
   );
 
-  monthYear.textContent = `${currentDate.toLocaleString("default", {
-    month: "long",
-  })} 
-  ${currentDate.getFullYear()}`;
+  monthYear.textContent =
+    (currentDate.toLocaleString, currentDate.getFullYear());
 
   for (let day = 1; day <= lastDay.getDate(); day++) {
     createDayElement(day);
