@@ -4,7 +4,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9ffdf;
+  background-color: #adffc3 !important;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -69,3 +69,31 @@ body {
   gap: 5px;
   padding: 10px;
 }
+
+.day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .day.current {
+    background-color: #ff6600;
+    color: white;
+  }
+  
+  .day.selected {
+    background-color: #004cff;
+    color: white;
+  }
+  
+  #dateInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+  }
+  
