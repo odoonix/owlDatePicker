@@ -76,3 +76,4 @@ dateInput.addEventListener("click", () => {
 });
 
 renderCalendar();
+
