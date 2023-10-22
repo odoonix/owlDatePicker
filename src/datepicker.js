@@ -15,7 +15,7 @@ function dayClick(day) {
     day
   );
   dateInput.value = selectedDate.toLocaleDateString("fa-IR");
-  // calendar.style.display = "none";
+  calendar.style.display = "none";
   renderCalendar();
 }
 
@@ -45,21 +45,25 @@ function renderCalendar() {
     currentDate.getMonth(),
     1
   );
+  
   const lastDay = new Date(
     currentDate.getFullYear(),
     currentDate.getMonth() + 1,
     0
   );
+  
 
   monthYear.textContent = `${currentDate.toLocaleString("fa-IR", {
     month: "long",
   })} 
   ${currentDate.getFullYear()}`;
 
+
   for (let day = 1; day <= lastDay.getDate(); day++) {
     createDayElement(day);
   }
 }
+
 
 prevBtn.addEventListener("click", () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
