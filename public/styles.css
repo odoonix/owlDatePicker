@@ -1,31 +1,40 @@
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.date-picker-container {
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
 }
 
-.container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.title{
-    font-size: 50px;
-    margin-bottom: 50px;
-    font-weight: bold;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.date{
-    width: 300px;
-    height: auto;
-    font-size: 24px;
-    padding: 0 16px;
-    border: 2px solid rgb(8, 8, 80);
-    background-color: rgb(189, 189, 248);
+.prev,
+.next {
+  cursor: pointer;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 5px;
+  text-align: center;
+}
+
+td {
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: #f2f2f2;
 }
