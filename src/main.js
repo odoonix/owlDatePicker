@@ -1,5 +1,7 @@
 // ES2015 Javascript
 import { Component, xml, useState, mount } from "@odoo/owl";
+import DatePicker from './datePicker'
+
 
 
 
@@ -16,10 +18,12 @@ class Counter extends Component {
 
 class Root extends Component {
   static template = xml`
-    <span>Hello Owl</span>
-    <Counter increment="2"/>`;
+    <div class="main">
+    <DatePicker/>
+    </div>
+    `;
 
-  static components = { Counter };
+  static components = { DatePicker };
 }
 
 mount(Root, document.body);
