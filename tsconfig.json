@@ -1,24 +1,22 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "noImplicitAny": true,
-        "sourceMap": true,
-        "module": "es6",
-        "target": "es5",
-        "experimentalDecorators": true,
-        "jsx": "react",
-        "allowJs": true,
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        // Ensure that Babel can safely transpile files in the TypeScript project
-        "isolatedModules": true,
-        "baseUrl": "./",
-        "paths": {
-            "@web/*": [
-                "src/*"
-            ]
-        }
-    },
-    "files": ["src/custom.d.ts"]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es5",
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "paths": {
+      "@web/*": ["src/*"]
+    }
+  },
+  "files": ["src/custom.d.ts"]
 }
